@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Musical Structure App</string>
+
+    <!-- Menu item for songs -->
+    <string name="category_songs">Songs</string>
+
+</resources>
