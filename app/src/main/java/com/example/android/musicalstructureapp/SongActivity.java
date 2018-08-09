@@ -17,7 +17,7 @@ public class SongActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.song_list);
 
-        // Create a list of words
+        // Create a list of songs
         ArrayList<Song> songs = new ArrayList<Song>();
         songs.add(new Song("Svdisthana", "Robin Silver"));
         songs.add(new Song("Happier", "Ed Sheeran"));
