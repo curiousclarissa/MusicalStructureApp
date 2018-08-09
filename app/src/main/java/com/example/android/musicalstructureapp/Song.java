@@ -28,7 +28,5 @@ public class Song {
     /**
      * get song Artist
      */
-    public String getmSongArtist() {
-        return mSongArtist;
-    }
+    public String getmSongArtist() { return mSongArtist;}
 }

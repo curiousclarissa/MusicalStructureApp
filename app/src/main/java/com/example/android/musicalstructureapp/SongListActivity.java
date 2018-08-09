@@ -10,7 +10,7 @@ import com.example.android.musicalstructureapp.SongAdapter;
 
 import java.util.ArrayList;
 
-public class SongActivity extends AppCompatActivity {
+public class SongListActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -4,6 +4,8 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Adapter;
+import android.widget.ArrayAdapter;
 import android.widget.ListAdapter;
 import android.widget.TextView;
 
@@ -13,8 +15,14 @@ import java.util.ArrayList;
  * Created by clarissajarem on 8/8/18.
  */
 
-public class SongAdapter implements ListAdapter {
+public class SongAdapter extends ArrayAdapter {
+    /**
+     * from udacity course on custom adapters and the androidflavor example
+     */
+    private static final String LOG_TAG = SongAdapter.class.getSimpleName();
+
     public SongAdapter(Context context, ArrayList<Song> songs) {
+
         super(context,0, songs);
     }
 
@@ -45,6 +53,4 @@ public class SongAdapter implements ListAdapter {
         // so that it can be shown in the ListView
         return listItemView;
     }
-}
-
 }
