@@ -5,14 +5,24 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp">
+
     <TextView
         android:id="@+id/songTitle_textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:text="Happier"/>
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        tools:text="Happier" />
+
     <TextView
         android:id="@+id/songArtist_textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
         tools:text="Ed Sheeran" />
+    <ImageView
+        android:id="@+id/playButton"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_play_circle_outline_black_24dp"
+        />
 </LinearLayout>

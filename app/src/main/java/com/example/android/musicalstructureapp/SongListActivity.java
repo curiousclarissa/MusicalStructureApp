@@ -1,7 +1,11 @@
 package com.example.android.musicalstructureapp;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 
@@ -14,19 +18,9 @@ public class SongListActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.song_list);
 
-        // Create a list of songs
-        ArrayList<Song> songs = new ArrayList<Song>();
-        songs.add(new Song("Svdisthana", "Robin Silver"));
-        songs.add(new Song("Happier", "Ed Sheeran"));
-        songs.add(new Song("Longing for the Unknown", "Karunesh"));
+        //use the list of songs found in SongList.java
 
-
-        // Create an {@link ArrayAdapter}, whose data source is a list of Strings. The
-        // adapter knows how to create layouts for each item in the list, using the
-        // simple_list_item_1.xml layout resource defined in the Android framework.
-        // This list item layout contains a single {@link TextView}, which the adapter will set to
-        // display a single word.
-        SongAdapter adapter = new SongAdapter(this, songs);
+        SongAdapter adapter = new SongAdapter(this, SongList.SONGS);
 
         // Find the {@link ListView} object in the view hierarchy of the {@link Activity}.
         // There should be a {@link ListView} with the view ID called list, which is declared in the
@@ -38,5 +32,14 @@ public class SongListActivity extends AppCompatActivity {
         // Do this by calling the setAdapter method on the {@link ListView} object and pass in
         // 1 argument, which is the {@link ArrayAdapter} with the variable name itemsAdapter.
         listView.setAdapter(adapter);
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent playSongIntent = new Intent(SongListActivity.this, NowPlayingActivity.class);
+                playSongIntent.putExtra("song", position);
+                startActivity(playSongIntent);
+            }
+        });
     }
+
 }
