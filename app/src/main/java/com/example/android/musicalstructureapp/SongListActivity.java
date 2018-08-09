@@ -1,12 +1,9 @@
-package com.example.android.musicalstructureapp.;
+package com.example.android.musicalstructureapp;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ListView;
 
-import com.example.android.musicalstructureapp.R;
-import com.example.android.musicalstructureapp.Song;
-import com.example.android.musicalstructureapp.SongAdapter;
 
 import java.util.ArrayList;
 

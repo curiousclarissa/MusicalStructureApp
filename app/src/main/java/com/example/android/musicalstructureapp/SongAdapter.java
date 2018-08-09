@@ -15,7 +15,7 @@ import java.util.ArrayList;
  * Created by clarissajarem on 8/8/18.
  */
 
-public class SongAdapter extends ArrayAdapter {
+public class SongAdapter extends ArrayAdapter<Song> {
     /**
      * from udacity course on custom adapters and the androidflavor example
      */
