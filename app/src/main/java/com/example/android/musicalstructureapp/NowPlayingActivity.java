@@ -17,5 +17,7 @@ public class NowPlayingActivity extends AppCompatActivity {
         Song song = SongList.SONGS.get(getIntent().getIntExtra("song", 0));
         TextView songTitle = findViewById(R.id.nowPlayingSongTitle);
         songTitle.setText(song.getmSongTitle());
+        TextView songArtist = findViewById(R.id.nowPlayingSongArtist);
+        songArtist.setText(song.getmSongArtist());
     }
 }
