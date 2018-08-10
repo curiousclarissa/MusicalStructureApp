@@ -35,7 +35,9 @@ public class SongListActivity extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                //explicit call to open nowPlaying activity
                 Intent playSongIntent = new Intent(SongListActivity.this, NowPlayingActivity.class);
+                //explicit request for specific song details to display
                 playSongIntent.putExtra("song", position);
                 startActivity(playSongIntent);
             }

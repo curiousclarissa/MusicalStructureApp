@@ -2,6 +2,7 @@ package com.example.android.musicalstructureapp;
 
 /**
  * Created by clarissajarem on 8/8/18.
+ * defines the Song class for use in retrieving Song properties in the app
  */
 
 public class Song {
@@ -26,7 +27,7 @@ public class Song {
         return mSongTitle;
     }
     /**
-     * get song Artist
+     * get song Artist Name
      */
     public String getmSongArtist() { return mSongArtist;}
 }

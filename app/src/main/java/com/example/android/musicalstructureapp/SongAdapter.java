@@ -17,7 +17,7 @@ import java.util.ArrayList;
 
 public class SongAdapter extends ArrayAdapter<Song> {
     /**
-     * from udacity course on custom adapters and the androidflavor example
+     * based on udacity course on custom adapters and the androidflavor example
      */
     private static final String LOG_TAG = SongAdapter.class.getSimpleName();
 
@@ -37,20 +37,26 @@ public class SongAdapter extends ArrayAdapter<Song> {
         // Get the {@link song} object located at this position in the list
         Song currentSong = getItem(position);
 
-        // Find the TextView in the list_item.xml layout with the ID version_name
+        // Find the TextView in the list_item.xml layout with the ID for songTitle
         TextView songTitleTextView = (TextView) listItemView.findViewById(R.id.songTitle_textView);
-        // Get the version name from the current AndroidFlavor object and
-        // set this text on the name TextView
+        /*
+        Get the version name from the current Song object and
+        set this text on the name TextView
+        */
         songTitleTextView.setText(currentSong.getmSongTitle());
 
-        // Find the TextView in the list_item.xml layout with the ID version_number
+        // Find the TextView in the list_item.xml layout with the ID for Artist Name
         TextView songArtistTextView = (TextView) listItemView.findViewById(R.id.songArtist_textView);
-        // Get the version number from the current AndroidFlavor object and
-        // set this text on the number TextView
+        /*
+        Get the artist name from the current song object and
+        set this text on the  TextView
+        */
         songArtistTextView.setText(currentSong.getmSongArtist());
 
-        // Return the whole list item layout (containing 2 TextViews and an ImageView)
-        // so that it can be shown in the ListView
+        /*
+        Return the whole list item layout (containing 2 TextViews
+        so that it can be shown in the ListView
+        */
         return listItemView;
     }
 }

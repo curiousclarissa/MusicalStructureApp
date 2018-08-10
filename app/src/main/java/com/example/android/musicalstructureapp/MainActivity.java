@@ -15,16 +15,22 @@ public class MainActivity extends AppCompatActivity {
         // Set the content of the song activity to use the activity_main.xml layout file
         setContentView(R.layout.activity_main);
 
-        //Find the View that corresponds to the numbers category
+        //Find the View that corresponds to the songs category listed in activity_main.xml
         TextView songs = findViewById(R.id.songs);
 
-        //set click listener on that View
+        //set click listener on the songs View
         songs.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                //explicitly open the SongListActivity
                 Intent playSongIntent = new Intent(MainActivity.this, SongListActivity.class);
                 startActivity(playSongIntent);
             }
         });
+
+        /*
+        TODO: add album category
+        TODO: add artist category
+        */
     }
 }
