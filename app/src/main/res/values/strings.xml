@@ -3,5 +3,7 @@
 
     <!-- Menu item for songs -->
     <string name="category_songs">Songs</string>
+    <string name="song_list_activity">Song List</string>
+    <string name="now_playing_activity">Listening To</string>
 
 </resources>

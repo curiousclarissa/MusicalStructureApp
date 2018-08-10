@@ -12,6 +12,7 @@ import android.widget.ListView;
 import java.util.ArrayList;
 
 public class SongListActivity extends AppCompatActivity {
+    private static final String SONG_KEY="song";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,7 +39,7 @@ public class SongListActivity extends AppCompatActivity {
                 //explicit call to open nowPlaying activity
                 Intent playSongIntent = new Intent(SongListActivity.this, NowPlayingActivity.class);
                 //explicit request for specific song details to display
-                playSongIntent.putExtra("song", position);
+                playSongIntent.putExtra(SONG_KEY, position);
                 startActivity(playSongIntent);
             }
         });

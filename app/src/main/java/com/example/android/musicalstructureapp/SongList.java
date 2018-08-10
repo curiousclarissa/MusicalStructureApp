@@ -17,8 +17,8 @@ public class SongList {
     //any song that needs to be available in the app needs to be in this list.
 
     static {
-        SONGS.add(new Song("Svdisthana", "Robin Silver"));
+        SONGS.add(new Song("Alexander Hamilton", "Lin Manuel-Miranda"));
         SONGS.add(new Song("Happier", "Ed Sheeran"));
-        SONGS.add(new Song("Longing for the Unknown", "Karunesh"));
+        SONGS.add(new Song("Ishq Bina", "A.R. Rahman"));
     }
 }
