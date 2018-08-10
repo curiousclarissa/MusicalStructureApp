@@ -8,7 +8,6 @@ import android.widget.TextView;
 /**
  * Created by clarissajarem on 8/8/18.
  * Displays the song that is currently playing including the name of the artist and title
- * TODO: acquire rights and implement true album artwork.
  * broken image icon used with permission
  * Copyright 2018 Material.io
 

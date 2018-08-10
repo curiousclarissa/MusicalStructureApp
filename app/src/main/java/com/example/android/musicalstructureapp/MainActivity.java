@@ -27,10 +27,5 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(playSongIntent);
             }
         });
-
-        /*
-        TODO: add album category
-        TODO: add artist category
-        */
     }
 }
