@@ -31,6 +31,12 @@
         android:layout_below="@+id/nowPlayingSongTitle"
         android:textSize="@dimen/song_artist_size_now_playing_activity"
         android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
-
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/back_button_image_size_now_playing_activity"
+        android:id="@+id/backButton"
+        android:src="@drawable/ic_arrow_back_black_24dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/nowPlayingSongArtist"/>
 
 </RelativeLayout>

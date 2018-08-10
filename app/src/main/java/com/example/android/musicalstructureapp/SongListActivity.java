@@ -6,13 +6,14 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ImageView;
 import android.widget.ListView;
 
 
 import java.util.ArrayList;
 
 public class SongListActivity extends AppCompatActivity {
-    private static final String SONG_KEY="song";
+    private static final String SONG_KEY = "song";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +44,20 @@ public class SongListActivity extends AppCompatActivity {
                 startActivity(playSongIntent);
             }
         });
-    }
 
+
+        //Find the View that corresponds to the back button image
+        ImageView backButton = findViewById(R.id.backButtonSongList);
+
+        //set click listener on the songs View
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //explicitly open the main activity
+                Intent backup = new Intent(SongListActivity.this, MainActivity.class);
+                startActivity(backup);
+            }
+        });
+
+    }
 }

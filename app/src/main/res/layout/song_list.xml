@@ -1,4 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <ImageView
+        android:layout_width="@dimen/back_button_image_size_now_playing_activity"
+        android:layout_height="@dimen/back_button_image_size_now_playing_activity"
+        android:id="@+id/backButtonSongList"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_arrow_back_black_24dp" />
 <ListView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
@@ -8,4 +20,4 @@
     android:id="@+id/list"
     tools:context="com.example.android.musicalstructureapp.MainActivity">
 </ListView>
-
+</LinearLayout>

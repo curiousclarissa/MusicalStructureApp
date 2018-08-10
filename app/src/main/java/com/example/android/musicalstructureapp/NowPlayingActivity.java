@@ -1,8 +1,11 @@
 package com.example.android.musicalstructureapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 /**
@@ -34,5 +37,17 @@ public class NowPlayingActivity extends AppCompatActivity {
         songTitle.setText(song.getmSongTitle());
         TextView songArtist = findViewById(R.id.nowPlayingSongArtist);
         songArtist.setText(song.getmSongArtist());
-    }
+        //Find the View that corresponds to the back button image
+        ImageView backButton = findViewById(R.id.backButton);
+
+        //set click listener on the songs View
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //explicitly open the SongListActivity
+                Intent backup = new Intent(NowPlayingActivity.this, SongListActivity.class);
+                startActivity(backup);
+                }
+        });
+}
 }
