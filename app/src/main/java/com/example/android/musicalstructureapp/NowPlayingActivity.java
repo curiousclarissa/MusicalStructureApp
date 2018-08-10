@@ -49,5 +49,17 @@ public class NowPlayingActivity extends AppCompatActivity {
                 startActivity(backup);
                 }
         });
+        //Find the View that corresponds to the back button image
+        ImageView backToMain = findViewById(R.id.backtoMainFromNowPlaying);
+
+        //set click listener on the songs View
+        backToMain.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //explicitly open the main activity
+                Intent returnToMain = new Intent(NowPlayingActivity.this, MainActivity.class);
+                startActivity(returnToMain);
+            }
+        });
 }
 }

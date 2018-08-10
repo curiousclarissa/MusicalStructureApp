@@ -38,5 +38,12 @@
         android:src="@drawable/ic_arrow_back_black_24dp"
         android:layout_centerHorizontal="true"
         android:layout_below="@id/nowPlayingSongArtist"/>
+    <ImageView
+        android:layout_width="@dimen/back_button_image_size_now_playing_activity"
+        android:layout_height="@dimen/back_button_image_size_now_playing_activity"
+        android:id="@+id/backtoMainFromNowPlaying"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/backButton"
+        android:src="@drawable/ic_first_page_black_24dp" />
 
 </RelativeLayout>
